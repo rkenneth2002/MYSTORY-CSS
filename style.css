@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  text-decoration: none;
+  list-style: none;
+  color: black;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: antiquewhite;
+}
+
+nav {
+  width: 100%;
+  height: 80px;
+  background-color: rgb(250, 229, 201);
+  border-bottom: 5px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: fixed;
+}
+
+label.logo {
+  font-size: 30px;
+  letter-spacing: 5px;
+  font-weight: bold;
+  margin-left: 30px;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  margin-right: 50px;
+}
+
+nav ul li a {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.checkbtn {
+  font-size: 30px;
+  float: right;
+  line-height: 80px;
+  margin-right: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  padding-top: 80px;
+}
+
+.contents {
+  height: calc(100vh - 84px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contents h2 {
+  font-size: 50px;
+  letter-spacing: 10px;
+  margin-left: 20px;
+}
+
+.contents-a {
+  height: calc(100vh - 84px);
+  padding: 10px 10px;
+}
+
+.contents-a h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contents-b {
+  width: 100%;
+  display: flex;
+  gap: 50px;
+}
+
+.contents-b img {
+  border-radius: 20px;
+  width: 500px;
+}
+
+.contents-b p {
+  font-size: 30px;
+}
+
+.contents-l {
+  height: calc(100vh - 84px);
+  padding: 10px 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.contents-l2 {
+  border: 2px solid black;
+  width: calc(100% / 3);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+  border-radius: 30px;
+}
+.contents-l2 h2 {
+  letter-spacing: 5px;
+}
+
+.contents-l2 p {
+  font-size: 20px;
+  margin-top: 50px;
+}
+
+.contents-l2 img {
+  width: 100%;
+  height: 200px;
+}
+
+.contents-f {
+  width: 100%;
+  height: calc(100vh - 84px);
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.contents-f h2 {
+  letter-spacing: 5px;
+}
+
+.contents-f2 {
+  display: flex;
+  gap: 10px;
+}
+
+.contents-f2 img {
+  width: 50%;
+  border-radius: 10px;
+}
+
+@media (max-width: 990px) {
+  label.logo {
+    font-size: 25px;
+    margin-left: 20px;
+  }
+
+  .checkbtn {
+    display: block;
+  }
+
+  ul {
+    position: fixed;
+    width: 50%;
+    height: 100vh;
+    background-color: rgb(250, 229, 201);
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 10px;
+    justify-content: center;
+  }
+
+  nav ul li a {
+    font-size: 15px;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+
+  .contents-b {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .contents-b img {
+    border-radius: 20px;
+    width: 400px;
+  }
+  .contents-b p {
+    font-size: 20px;
+  }
+
+  .contents-l {
+    height: calc(100vh - 84px);
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .contents-l2 {
+    border: 2px solid black;
+    width: 100%;
+    height: 250px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+  }
+  .contents-l2 h2 {
+    letter-spacing: 5px;
+    font-size: 20px;
+  }
+
+  .contents-l2 img {
+    width: 50%;
+    height: 100px;
+  }
+
+  .contents-l2 p {
+    font-size: 15px;
+    margin-top: 8px;
+  }
+
+  .contents-f {
+    width: 100%;
+    height: calc(100vh - 84px);
+    text-align: center;
+    padding: 10px 20px;
+  }
+
+  .contents-f h2 {
+    letter-spacing: 5px;
+  }
+
+  .contents-f2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .contents-f2 img {
+    width: 100%;
+    height: 350px;
+  }
+}
+
+/*375px width*/
+@media (max-width: 375px) {
+  label.logo {
+    font-size: 20px;
+    margin-left: 20px;
+  }
+
+  .checkbtn {
+    display: block;
+  }
+
+  ul {
+    position: fixed;
+    width: 50%;
+    height: 100vh;
+    background-color: rgb(250, 229, 201);
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 10px;
+    justify-content: center;
+  }
+
+  nav ul li a {
+    font-size: 15px;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+
+  .contents-b img {
+    border-radius: 20px;
+    width: 350px;
+  }
+}
